@@ -1,71 +1,61 @@
 const HEROES = {
   vincent_vega: {
     name: 'Винсент Вега',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/0/05/Vincent_Vega.jpg',
+    image: 'https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg',
     description:
       'Ты про стиль, импровизацию и энергию момента. Твоя сила — быстрое включение и личная харизма.',
   },
   mia_wallace: {
     name: 'Мия Уоллес',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/e/e6/Mia_Wallace.jpg',
+    image: 'https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg',
     description:
       'Ты умеешь заполнять собой пространство и задавать тон. Твоя суперсила — магнетизм и эмоция.',
   },
   beatrix_kiddo: {
     name: 'Беатрикс Киддо',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/2/2c/The_Bride.jpg',
+    image: 'https://image.tmdb.org/t/p/w500/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg',
     description:
       'Ты не сгораешь, а доводишь до конца. Твоя сила — дисциплина, воля и точный удар в нужный момент.',
   },
   django_freeman: {
     name: 'Джанго Фримен',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_poster.jpg',
+    image: 'https://image.tmdb.org/t/p/w500/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg',
     description:
       'Ты выбираешь свободу и не предаёшь себя. Твоя сила — смелость, достоинство и преданность своим.',
   },
   jules_winnfield: {
     name: 'Джулс Уиннфилд',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/3/35/Jules_Winnfield.jpg',
+    image: 'https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg',
     description:
       'Ты человек принципов и смысла. Твоя сила — внутренний стержень и умение говорить так, что тебя слышат.',
   },
   marquis_warren: {
     name: 'Маркиз Уоррен',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/9/98/The_Hateful_Eight_-_Major_Marquis_Warren.jpg',
+    image: 'https://image.tmdb.org/t/p/w500/jIywvdPjia2t3eKYbjVTcwBQlG8.jpg',
     description:
       'Ты стратег и наблюдатель: видишь больше, чем показываешь. Твоя сила — интеллект и холодный расчёт.',
   },
   cliff_booth: {
     name: 'Клифф Бут',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/6/67/Cliff_Booth_%28Brad_Pitt%29.png',
+    image: 'https://image.tmdb.org/t/p/w500/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg',
     description:
       'Ты надёжен, спокоен и не любишь лишнего шума. Твоя сила — практичность, верность и уверенность.',
   },
   shosanna_dreyfus: {
     name: 'Шошанна Дрейфус',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/d/dd/Shosanna_Dreyfus.jpg',
+    image: 'https://image.tmdb.org/t/p/w500/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg',
     description:
       'Ты терпелив(а), точен(на) и умеешь ждать правильный момент. Твоя сила — выдержка и личная миссия.',
   },
   oren_ishii: {
     name: 'О-Рен Ишии',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/9/94/O-Ren_Ishii.jpg',
+    image: 'https://image.tmdb.org/t/p/w500/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg',
     description:
       'Ты держишь контроль и не боишься сложных решений. Твоя сила — статус, дисциплина и жёсткая ясность.',
   },
   aldo_raine: {
     name: 'Альдо Рейн',
-    image:
-      'https://upload.wikimedia.org/wikipedia/en/8/84/Lt._Aldo_Raine.jpg',
+    image: 'https://image.tmdb.org/t/p/w500/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg',
     description:
       'Ты ведёшь за собой и действуешь без промедления. Твоя сила — лидерство, напор и готовность рисковать.',
   },
