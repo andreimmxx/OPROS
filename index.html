@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Кто ты в фильме Квентина Тарантино?</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Кто ты в фильме Квентина Тарантино?</h1>
+        <p>Ответь на 10 вопросов и узнай своего героя.</p>
+      </header>
+
+      <section id="quiz-card" class="card">
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span id="progress-text">Вопрос 1 из 10</span>
+          </div>
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-bar__fill"></div>
+          </div>
+        </div>
+
+        <h2 id="question-title" class="question-title"></h2>
+        <div id="answers" class="answers"></div>
+      </section>
+
+      <section id="result-card" class="card hidden">
+        <h2>Твой результат</h2>
+        <div id="result-images" class="result-images"></div>
+        <p class="result-hero" id="result-hero"></p>
+        <p id="result-description"></p>
+
+        <div id="tie-info" class="tie-info hidden"></div>
+
+        <button id="restart-btn" class="btn">Пройти ещё раз</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
