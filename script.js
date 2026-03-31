@@ -1,51 +1,71 @@
 const HEROES = {
   vincent_vega: {
     name: 'Винсент Вега',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/0/05/Vincent_Vega.jpg',
     description:
       'Ты про стиль, импровизацию и энергию момента. Твоя сила — быстрое включение и личная харизма.',
   },
   mia_wallace: {
     name: 'Мия Уоллес',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/e/e6/Mia_Wallace.jpg',
     description:
       'Ты умеешь заполнять собой пространство и задавать тон. Твоя суперсила — магнетизм и эмоция.',
   },
   beatrix_kiddo: {
     name: 'Беатрикс Киддо',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/2/2c/The_Bride.jpg',
     description:
       'Ты не сгораешь, а доводишь до конца. Твоя сила — дисциплина, воля и точный удар в нужный момент.',
   },
   django_freeman: {
     name: 'Джанго Фримен',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_poster.jpg',
     description:
       'Ты выбираешь свободу и не предаёшь себя. Твоя сила — смелость, достоинство и преданность своим.',
   },
   jules_winnfield: {
     name: 'Джулс Уиннфилд',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/3/35/Jules_Winnfield.jpg',
     description:
       'Ты человек принципов и смысла. Твоя сила — внутренний стержень и умение говорить так, что тебя слышат.',
   },
   marquis_warren: {
     name: 'Маркиз Уоррен',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/9/98/The_Hateful_Eight_-_Major_Marquis_Warren.jpg',
     description:
       'Ты стратег и наблюдатель: видишь больше, чем показываешь. Твоя сила — интеллект и холодный расчёт.',
   },
   cliff_booth: {
     name: 'Клифф Бут',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/6/67/Cliff_Booth_%28Brad_Pitt%29.png',
     description:
       'Ты надёжен, спокоен и не любишь лишнего шума. Твоя сила — практичность, верность и уверенность.',
   },
   shosanna_dreyfus: {
     name: 'Шошанна Дрейфус',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/d/dd/Shosanna_Dreyfus.jpg',
     description:
       'Ты терпелив(а), точен(на) и умеешь ждать правильный момент. Твоя сила — выдержка и личная миссия.',
   },
   oren_ishii: {
     name: 'О-Рен Ишии',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/9/94/O-Ren_Ishii.jpg',
     description:
       'Ты держишь контроль и не боишься сложных решений. Твоя сила — статус, дисциплина и жёсткая ясность.',
   },
   aldo_raine: {
     name: 'Альдо Рейн',
+    image:
+      'https://upload.wikimedia.org/wikipedia/en/8/84/Lt._Aldo_Raine.jpg',
     description:
       'Ты ведёшь за собой и действуешь без промедления. Твоя сила — лидерство, напор и готовность рисковать.',
   },
@@ -211,6 +231,7 @@ const progressFillEl = document.getElementById('progress-fill');
 
 const quizCardEl = document.getElementById('quiz-card');
 const resultCardEl = document.getElementById('result-card');
+const resultImagesEl = document.getElementById('result-images');
 const resultHeroEl = document.getElementById('result-hero');
 const resultDescriptionEl = document.getElementById('result-description');
 const tieInfoEl = document.getElementById('tie-info');
@@ -331,9 +352,23 @@ function renderResult() {
 
   const names = winners.map((key) => HEROES[key].name);
   const descriptions = winners.map((key) => HEROES[key].description);
+  const images = winners.map((key) => ({
+    src: HEROES[key].image,
+    alt: HEROES[key].name,
+  }));
 
   resultHeroEl.textContent = names.join(' / ');
   resultDescriptionEl.textContent = descriptions.join(' ');
+  resultImagesEl.innerHTML = '';
+
+  images.forEach((image) => {
+    const img = document.createElement('img');
+    img.className = 'result-image';
+    img.src = image.src;
+    img.alt = `Персонаж: ${image.alt}`;
+    img.loading = 'lazy';
+    resultImagesEl.appendChild(img);
+  });
 
   if (tieReason) {
     tieInfoEl.classList.remove('hidden');
